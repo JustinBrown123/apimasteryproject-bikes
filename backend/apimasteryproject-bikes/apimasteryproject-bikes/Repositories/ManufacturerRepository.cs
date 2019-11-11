@@ -5,7 +5,11 @@ using System.Threading.Tasks;
 
 namespace apimasteryproject_bikes.Repositories
 {
-    public class ManufacturerRepository
+    public class ManufacturerRepository : Repository<Manufacturer>, IRepository<Manufacturer>
     {
+        public ManufacturerRepository(BikeContext context) : base(context)
+        {
+
+        }
     }
 }

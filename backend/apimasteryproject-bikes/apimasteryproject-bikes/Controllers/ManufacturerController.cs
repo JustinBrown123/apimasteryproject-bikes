@@ -3,13 +3,25 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
+using apimasteryproject_bikes.Models;
+using apimasteryproject_bikes.Repositories;
+using apimasteryproject_bike.AspNetCore.Http;
 
 namespace apimasteryproject_bikes.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    public class ValuesController : ControllerBase
+    public class ManufacturerController : ControllerBase
     {
+
+
+        private IRepository<Manufacturer> manufacturerRepo;
+
+        public ManufacturerController(IRepository<Manufacturer> manufacturerRepo)
+        {
+            this.manufacturerRepo = manufacturerRepo;
+        }
+
         // GET api/values
         [HttpGet]
         public ActionResult<IEnumerable<string>> Get()

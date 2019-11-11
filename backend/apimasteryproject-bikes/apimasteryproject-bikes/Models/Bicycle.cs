@@ -12,10 +12,9 @@ namespace apimasteryproject_bikes.Models
         public string Image { get; set; }
         public string Description { get; set; }
 
-        public int StyleID { get; set; }
+        public int Style { get; set; }
         public int ManufacturerID { get; set; }
 
-        public virtual Style Styles { get; set; }
         public virtual Manufacturer Manufacturers { get; set; }
     }
 }
