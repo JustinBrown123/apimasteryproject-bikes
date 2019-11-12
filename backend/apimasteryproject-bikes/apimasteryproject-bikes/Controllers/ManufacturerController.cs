@@ -1,11 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+﻿using System.Collections.Generic;
 using Microsoft.AspNetCore.Mvc;
 using apimasteryproject_bikes.Models;
 using apimasteryproject_bikes.Repositories;
-using apimasteryproject_bike.AspNetCore.Http;
 
 namespace apimasteryproject_bikes.Controllers
 {
