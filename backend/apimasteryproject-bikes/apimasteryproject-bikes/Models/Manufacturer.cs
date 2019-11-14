@@ -11,6 +11,8 @@ namespace apimasteryproject_bikes.Models
         public string Name { get; set; }
         public string Logo { get; set; }
         public string Description { get; set; }
+
+  
         public virtual ICollection<Bicycle> Bicycles { get; set; }
 
         public Manufacturer(int id, string name, string logo, string description)
@@ -18,11 +20,8 @@ namespace apimasteryproject_bikes.Models
             ID = id;
             Name = name;
             Logo = logo;
-            Description = description;
+            Description = Description;
         }
-        public Manufacturer()
-        {
 
-        }
     }
 }
