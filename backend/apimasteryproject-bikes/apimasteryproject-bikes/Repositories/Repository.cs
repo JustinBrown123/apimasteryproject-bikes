@@ -26,7 +26,7 @@ namespace apimasteryproject_bikes.Repositories
             db.SaveChanges();
         }
 
-        public T GetById(int id)
+        public virtual T GetById(int id)
         {
             return db.Set<T>().Find(id);
         }
