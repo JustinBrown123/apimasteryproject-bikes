@@ -8,11 +8,18 @@ using apimasteryproject_bikes.Models;
 
 namespace apimasteryproject_bikes.Repositories
 {
-    public class BicycleRepository : Repository<Bicycle>, IRepository<Bicycle>
+    public class BicycleRepository
     {
-        public BicycleRepository(BikeContext context) : base(context)
+        private BikeContext db;
+        public BicycleRepository(BicycleContext context) : base(context)
         {
 
         }
+        public IEnumerable<Bicycle> GetbyManufacturerID(int ManufacturerID)
+        {
+            var manufacturer = db.Bicycles.Where(p => p.ManufacturerID == manufacturerID);
+            return bicycles;
+        }
+
     }
 }

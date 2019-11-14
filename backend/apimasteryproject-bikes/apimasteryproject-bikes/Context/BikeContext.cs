@@ -1,5 +1,9 @@
-﻿using apimasteryproject_bikes.Models;
-using Microsoft.EntityFrameworkCore;
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Threading.Tasks;
+using apimasteryproject_bikes.EntityFrameWorkCore;
+using apimasteryproject_bikes.Models;
 
 namespace apimasteryproject_bikes.Context
 {
@@ -7,7 +11,7 @@ namespace apimasteryproject_bikes.Context
     {
         public DbSet<Manufacturer> Manufacturers { get; set; }
         public DbSet<Bicycle> Bicycles { get; set; }
-        protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
+        protected override void onCongiguring(DbContextOptionsBuilder optionsBuilder)
         {
             var connectionString = "Server=(localdb)\\mssqllocaldb;Database=apimasteryproject-bikes;Trusted_Connection=True;";
             optionsBuilder.UseSqlServer(connectionString)
@@ -18,11 +22,11 @@ namespace apimasteryproject_bikes.Context
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             modelBuilder.Entity<Manufacturer>().HasData(
-                new Manufacturer(1, "Specialized", "Logo", "Description")
+
                 );
 
             modelBuilder.Entity<Bicycle>().HasData(
-                new Bicycle(1, "Tarmac", "Image", "Description", "Road", 1)
+
                 );
             base.OnModelCreating(modelBuilder);
         }
