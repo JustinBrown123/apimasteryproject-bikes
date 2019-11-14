@@ -18,36 +18,43 @@ namespace apimasteryproject_bikes.Controllers
             this.manufacturerRepo = manufacturerRepo;
         }
 
-        // GET api/values
+        // GET api/Manufacturer
         [HttpGet]
-        public ActionResult<IEnumerable<string>> Get()
+        public IEnumerable<Manufacturer> Get()
         {
-            return new string[] { "value1", "value2" };
+            return manufacturerRepo.GetAll();
         }
 
-        // GET api/values/5
+        // GET api/Manufacturer/5
         [HttpGet("{id}")]
-        public ActionResult<string> Get(int id)
+        public Manufacturer Get(int id)
         {
-            return "value";
+            return manufacturerRepo.GetById(id);
         }
 
-        // POST api/values
+        // POST api/Manufacturer
         [HttpPost]
-        public void Post([FromBody] string value)
+        public IEnumerable<Manufacturer> Post([FromBody] Manufacturer manufacturer)
         {
+            manufacturerRepo.Create(manufacturer);
+            return manufacturerRepo.GetAll();
         }
 
-        // PUT api/values/5
+        // PUT api//Manufacturer
         [HttpPut("{id}")]
-        public void Put(int id, [FromBody] string value)
+        public IEnumerable<Manufacturer> Put(int id, [FromBody] Manufacturer manufacturer)
         {
+            manufacturerRepo.Update(manufacturer);
+            return manufacturerRepo.GetAll();
         }
 
-        // DELETE api/values/5
+        // DELETE api/Manufacturer
         [HttpDelete("{id}")]
-        public void Delete(int id)
+        public IEnumerable<Manufacturer> Delete(int id)
         {
+            var manufacturer = manufacturerRepo.GetById(id);
+            manufacturerRepo.Delete(manufacturer);
+            return manufacturerRepo.GetAll();
         }
     }
 }
