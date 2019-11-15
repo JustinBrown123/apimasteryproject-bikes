@@ -3,6 +3,7 @@ import Footer from "./component/footer";
 import Home from "./component/home";
 import apiActions from "./API/apiActions";
 import Manufacturers from "./component/manufacturers";
+import Bicycles from "./component/bicycles";
 
 export default () =>
 {
@@ -13,6 +14,7 @@ function Pagebuild(){
     header();
     home();
     navManufacturers();
+    navBicycles();
     footer();
 
 };
@@ -36,7 +38,18 @@ function navManufacturers(){
           document.querySelector("#app").innerHTML = Manufacturers(manufacturers)
         })
     })
-
 }
+function navBicycles(){
+    const bicyclesButton= document.querySelector(".nav__bicycles")
+    const app = document.querySelector("#app")
+    bicyclesButton.addEventListener("click", function(){
+        apiActions.getRequest("https://localhost:44312/api/bicycle", bicycles =>{
+            document.querySelector("#app").innerHTML = Bicycles(bicycles)
+        })
+    })
+    
+}
+
+
 
     

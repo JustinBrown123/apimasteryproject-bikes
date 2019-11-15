@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace apimasteryproject_bikes.Controllers
 {
-    [Route("api/bicycles")]
+    [Route("api/[controller]")]
     [ApiController]
     public class BicycleController : ControllerBase
     {
