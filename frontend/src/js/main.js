@@ -4,6 +4,7 @@ import Home from "./component/home";
 import apiActions from "./API/apiActions";
 import Manufacturers from "./component/manufacturers";
 import Bicycles from "./component/bicycles";
+import SingleManufacturerPage from "./component/SingleManufacturerPage";
 
 export default () =>
 {
@@ -15,6 +16,7 @@ function Pagebuild(){
     home();
     navHome();
     navManufacturers();
+    SingleManufacturerPage();
     navBicycles();
     footer();
 
@@ -42,7 +44,7 @@ function navManufacturers(){
     const app = document.querySelector("#app")
     manufacturersButton.addEventListener("click", function(){
         apiActions.getRequest("https://localhost:44312/api/manufacturer", manufacturers =>{
-          document.querySelector("#app").innerHTML = Manufacturers(manufacturers)
+          document.querySelector("#app").innerHTML = Manufacturers(manufacturers);
         })
     })
     app.addEventListener("click", function(){
@@ -51,9 +53,10 @@ function navManufacturers(){
             console.log(manufacturerID);
             apiActions.getRequest(`https://localhost:44312/api/manufacturer/${manufacturerID}`,
             manufacturer => {
-                console.log(manufacturer.bicycles)
+                console.log(manufacturer.name)
+                document.querySelector("#app").innerHTML = SingleManufacturerPage(manufacturer)
 
-                app.innerHTML= Bicycles(manufacturer.bicycles)
+               
              })
         }
     });

@@ -5,8 +5,8 @@ export default function Bicycles(bicycles){
             .map(bicycle => {
                 return `
                 <div class="bicycles">
-                    <img class="bicycles__image" src=${bicycle.image}></img>
-                    <input class="bicycles__id" type="hidden" value="${bicycle.id}">                    
+                    <img class="bicycle__image" src=${bicycle.image}></img>
+                    <input class="bicycle__id" type="hidden" value="${bicycle.id}">                    
                 </div>
                 `
             }) 

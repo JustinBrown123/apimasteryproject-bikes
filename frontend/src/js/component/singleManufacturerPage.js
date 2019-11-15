@@ -1,6 +1,6 @@
 export default function SingleManufacturerPage(manufacturer)  {
     return `
-    <div class="manufacturerDetails>
+    <div class="ItemDetails>
         <article>
             <img class ="singleObject" src=${manufacturer.logo}>
                 <input class="manufacturer__id" type="hidden" value="${manufacturer.id}">
@@ -8,12 +8,12 @@ export default function SingleManufacturerPage(manufacturer)  {
             <ul>
             <div class="bicyclesGrid">
             ${manufacturer.bicycles
-            .map(manufacturer => {
+            .map(bicycle => {
                 return `
                 <li>
                     <h3>${bicycle.name}</h3>
                     <h4>${bicycle.style}</h4>
-                    <img class="bicycles__image" src=${bicycle.image}></img>
+                    <img class="bicycle__image" src=${bicycle.image}></img>
                     <p>${bicycle.description}</p>
                     <input class="bicycle__id" type="hidden" value="${bicycle.id}">
                         <button class="edit-bicycle__submit" id="buttonCrud">Edit</button>
@@ -35,6 +35,15 @@ export default function SingleManufacturerPage(manufacturer)  {
             </section>
         </div>
         </article>
+        <article
+        <li>
+            <h3>${manufacturer.name}</h3>
+        </li>
+            <input class="manufacturer__id" type="hidden" value="${manufacturer.id}">
+            <button class="edit-manufacturer__submit" id="buttonCrud">Edit</button>
+            <button class="delete-manufacturer__submit" id="buttonCrud">Delete</button>
+        </article>
+       </div> 
         
-    `
+    `;
 }
