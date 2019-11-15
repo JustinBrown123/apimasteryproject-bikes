@@ -35,8 +35,6 @@ export default function SingleManufacturerPage(manufacturer)  {
             </section>
         </div>
         </article>
-        <article>
-            <li>
-            <h3>    
+        
     `
 }
