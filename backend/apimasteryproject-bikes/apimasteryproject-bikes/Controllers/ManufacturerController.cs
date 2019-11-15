@@ -5,7 +5,7 @@ using apimasteryproject_bikes.Repositories;
 
 namespace apimasteryproject_bikes.Controllers
 {
-    [Route("api/[controller]")]
+    [Route("api/manufacturer")]
     [ApiController]
     public class ManufacturerController : ControllerBase
     {
@@ -42,7 +42,7 @@ namespace apimasteryproject_bikes.Controllers
 
         // PUT api//Manufacturer
         [HttpPut("{id}")]
-        public IEnumerable<Manufacturer> Put(int id, [FromBody] Manufacturer manufacturer)
+        public IEnumerable<Manufacturer> Put([FromBody] Manufacturer manufacturer)
         {
             manufacturerRepo.Update(manufacturer);
             return manufacturerRepo.GetAll();
