@@ -2,6 +2,7 @@ import Header from "./component/header";
 import Footer from "./component/footer";
 import Home from "./component/home";
 import apiActions from "./API/apiActions";
+import Manufacturers from "./component/manufacturers";
 
 export default () =>
 {
@@ -11,6 +12,7 @@ export default () =>
 function Pagebuild(){
     header();
     home();
+    navManufacturers();
     footer();
 
 };
@@ -30,8 +32,11 @@ function navManufacturers(){
     const manufacturersButton= document.querySelector(".nav__manufacturers")
     const app = document.querySelector("#app")
     manufacturersButton.addEventListener("click", function(){
-        apiActions.getRequest("http://localhost:44312/api/manufacturer", manufacturers =>{
-            document.querySelector("#app").innerHTML = Manufacturers(manufacturer)
+        apiActions.getRequest("https://localhost:44312/api/manufacturer", manufacturers =>{
+          document.querySelector("#app").innerHTML = Manufacturers(manufacturers)
         })
     })
+
 }
+
+    
