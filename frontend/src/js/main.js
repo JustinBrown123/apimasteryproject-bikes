@@ -62,7 +62,7 @@ function navManufacturers(){
             console.log(manufacturer);
             apiActions.postRequest("https://localhost:44312/api/manufacturers",
             {
-                name: manufacturer,
+                manufacturer: manufacturer,
                 description: description,
                 image: image
             },
@@ -75,13 +75,12 @@ function navManufacturers(){
     });
 
     app.addEventListener('click', function(){
-        if(event.target.classList.contains("manufacturerImage")){
+        if(event.target.classList.contains("manufacturer__bikes")){
             const manufacturerID = event.target.parentElement.querySelector(".manufacturer__id")
             .value;
-            console.log(Image)
             apiActions.getRequest(`https://localhost:44312/api/manufacturers/${manufacturerID}`,
             manufacturer => {
-                console.log(manufacturer.name)
+                console.log(manufacturer.image)
                 
                document.querySelector("#app").innerHTML = SingleManufacturerPage(manufacturer);
 

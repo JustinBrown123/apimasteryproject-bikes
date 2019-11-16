@@ -3,7 +3,7 @@ export default function SingleManufacturerPage(manufacturer)  {
    
         <article>
             <ul>
-            <img src=${manufacturer.image} class ="manufacturerImage">
+            <img src=${manufacturer.image} class ="manufacturer__image">
             <input id="manufacturer__id" type="hidden" value="${manufacturer.id}"> </img>
             </ul>
         </article>
@@ -28,7 +28,7 @@ export default function SingleManufacturerPage(manufacturer)  {
 
         </ul>
         <div class="form">
-            <section class="add-item">
+ 
          <h2>Add a Bicycle</h1>
             <input class="manufacturer__id" type="hidden" value="${manufacturer.id}">
             <input class="bicycle__name" type='text' placeholder='Add a Bicycle'>
@@ -36,20 +36,17 @@ export default function SingleManufacturerPage(manufacturer)  {
             <input class="bicycle__type"  type='text' placeholder='Add a Bicycle Type'>          
             <input class="bicycle__img" type="hidden" value="images/bicycledrawing.jpg">
             <button class="add-biycle__submit" id = "buttonCrud">Submit</button>
-            </section>
+
         </div>
         </article>
-        <article>
+
+
         <div class="editObject">
-        <li>
-            <h3>${manufacturer.name}</h3>
-        </li>
+            <h3>Make changes to: ${manufacturer.name}</h3>  
             <input class="manufacturer__id" type="hidden" value="${manufacturer.id}">
             <button class="edit-manufacturer__submit" id="buttonCrud">Edit</button>
-            <button class="delete-manufacturer__submit" id="buttonCrud">Delete</button>
-            </div> 
-        </article>
-
+            <button class="delete-manufacturer__submit" id="buttonCrud">Delete</button>          
+        </div> 
         
     `;
 }

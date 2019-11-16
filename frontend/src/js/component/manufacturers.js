@@ -5,8 +5,9 @@ export default function Manufacturers(manufacturers){
             .map(manufacturer => {
                 return `
                 <div class="manufacturers">
-                    <img class="manufacturerImage" src=${manufacturer.image}></img>
-                    <input class="manufacturer__id" type="hidden" value="${manufacturer.id}">                    
+                    <img class="manufacturer__image" src=${manufacturer.image}>
+                    <input class="manufacturer__id" type="hidden" value="${manufacturer.id}">   </img>
+                    <button class="manufacturer__bikes">Available Bikes</button>            
                 </div>
                 `
             }) 
