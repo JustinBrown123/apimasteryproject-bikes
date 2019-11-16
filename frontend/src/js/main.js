@@ -5,6 +5,10 @@ import apiActions from "./API/apiActions";
 import Manufacturers from "./component/manufacturers";
 import Bicycles from "./component/bicycles";
 import SingleManufacturerPage from "./component/singleManufacturerPage";
+import Bicycle from "./component/bicycle";
+import Manufacturer from "./component/manufacturer"
+
+
 
 export default () =>
 {
@@ -16,9 +20,9 @@ function Pagebuild(){
     home();
     navHome();
     navManufacturers();
-    
+    bicycle();
     navBicycles();
-    SingleManufacturerPage();
+  
     footer();
 
 };
@@ -78,14 +82,47 @@ function navManufacturers(){
             const manufacturerID = event.target.parentElement.querySelector(".manufacturer__id").value;
             console.log("delete" + manufacturerID)
             apiActions.deleteRequest(`https://localhost:44312/api/manufacturers/${manufacturerID}`,
-            manufacturer => {
-                app.innerHTML = Manufacturers(Manufacturers)
+            manufacturers => {
+                app.innerHTML = Manufacturers(manufacturers)
             });
         }
     })
+    app.addEventListener("click", function(){
+        if(event.target.classList.contains("edit-manufacturer__submit")){
+            const manufacturerID = event.target.parentElement.querySelector(".manufacturer__id").value;
+            console.log("edit" + manufacturerID);
+            apiActions.getRequest(`https://localhost:44312/api/manufacturers/${manufacturerID}`,
+                manufacturer => {
+                app.innerHTML= Manufacturer(manufacturer);
+            })
+        }
+    });
+    app.addEventListener("click", function(){
+        if(event.target.classList.contains("update-manufacturer__submit")){
+            const manufacturerID = event.target.parentElement.querySelector(
+                ".update-manufacturer__id"
+            ).value;
+            const manufacturerName = event.target.parentElement.querySelector(".update-manufacturer__name"
+            ).value;
+            const manufacturerDescription = event.target.parentElement.querySelector(".update-manufacturer__description"
+            ).value;
+            const manufacturerData = {
+                id: manufacturerID,
+                name: manufacturerName,
+                description: manufacturerDescription
+            }
+            apiActions.putRequest(`https://localhost:44312/api/manufacturers/${manufacturerID}`,
+            manufacturerData,
+            manufacturers =>{
+                app.innerHTML = Manufacturers(manufacturers)
+            }
+            )
+        }
+
+    })
 
     app.addEventListener('click', function(){
-        if(event.target.classList.contains("manufacturer__bikes")){
+        if(event.target.classList.contains("manufacturer__image")){
             const manufacturerID = event.target.parentElement.querySelector(".manufacturer__id")
             .value;
             apiActions.getRequest(`https://localhost:44312/api/manufacturers/${manufacturerID}`,
