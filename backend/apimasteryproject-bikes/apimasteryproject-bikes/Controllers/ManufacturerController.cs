@@ -5,7 +5,7 @@ using apimasteryproject_bikes.Repositories;
 
 namespace apimasteryproject_bikes.Controllers
 {
-    [Route("api/manufacturer")]
+    [Route("api/Manufacturers")]
     [ApiController]
     public class ManufacturerController : ControllerBase
     {

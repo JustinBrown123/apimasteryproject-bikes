@@ -9,15 +9,15 @@ namespace apimasteryproject_bikes.Models
     {
         public int ID { get; set; }
         public string Name { get; set; }
-        public string Logo { get; set; }
+        public string Image { get; set; }
         public string Description { get; set; }
         public virtual ICollection<Bicycle> Bicycles { get; set; }
 
-        public Manufacturer(int id, string name, string logo, string description)
+        public Manufacturer(int id, string name, string image, string description)
         {
             ID = id;
             Name = name;
-            Logo = logo;
+            Image = image;
             Description = description;
         }
         public Manufacturer()

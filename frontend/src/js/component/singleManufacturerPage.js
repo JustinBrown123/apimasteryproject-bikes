@@ -1,11 +1,13 @@
 export default function SingleManufacturerPage(manufacturer)  {
     return `
-    <div class="ItemDetails>
+   
         <article>
-            <img class ="singleObject" src=${manufacturer.logo}>
-                <input class="manufacturer__id" type="hidden" value="${manufacturer.id}">
-            </img>
             <ul>
+            <img src=${manufacturer.image} class ="manufacturerImage">
+            <input id="manufacturer__id" type="hidden" value="${manufacturer.id}"> </img>
+            </ul>
+        </article>
+
             <div class="bicyclesGrid">
             ${manufacturer.bicycles
             .map(bicycle => {
@@ -18,14 +20,16 @@ export default function SingleManufacturerPage(manufacturer)  {
                     <input class="bicycle__id" type="hidden" value="${bicycle.id}">
                         <button class="edit-bicycle__submit" id="buttonCrud">Edit</button>
                         <button class="delete-bicycle__submit" id="buttonCrud">Delete</button>
-                    </li>    
+                </li>    
                     `;
             })
-        .join("")}    
+        .join("")}
+        </div>  
+
         </ul>
         <div class="form">
-        <section class="add-Bicycle">
-        <h2>Add a Bicycle</h1>
+            <section class="add-item">
+         <h2>Add a Bicycle</h1>
             <input class="manufacturer__id" type="hidden" value="${manufacturer.id}">
             <input class="bicycle__name" type='text' placeholder='Add a Bicycle'>
             <input class="bicycle__description"  type='text' placeholder='Add a Bicycle descriptions'>
@@ -35,15 +39,17 @@ export default function SingleManufacturerPage(manufacturer)  {
             </section>
         </div>
         </article>
-        <article
+        <article>
+        <div class="editObject">
         <li>
             <h3>${manufacturer.name}</h3>
         </li>
             <input class="manufacturer__id" type="hidden" value="${manufacturer.id}">
             <button class="edit-manufacturer__submit" id="buttonCrud">Edit</button>
             <button class="delete-manufacturer__submit" id="buttonCrud">Delete</button>
+            </div> 
         </article>
-       </div> 
+
         
     `;
 }
