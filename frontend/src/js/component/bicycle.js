@@ -3,7 +3,7 @@ export default function bicycle(bicycle){
         <section class="main-content__bicycle">
             <h3>${bicycle.name}</h3>          
             <img class="bicycleImage" src=${bicycle.image}></img>
-            <h4>${bicycle.type}</h4>
+            <h4>${bicycle.style}</h4>
             <p>${bicycle.description}</p>
         </section>
     <section class="update-bicycle">

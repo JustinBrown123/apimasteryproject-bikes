@@ -6,14 +6,12 @@ export default function Bicycles(bicycles){
                 return `
                 <div class="bicycles">
                 <h3>${bicycle.name}</h3>
-                    <img class="bicycleImage" src=${bicycle.image}></img>
+                    <img class="bicycle__image" src=${bicycle.image}></img>
                     <input class="bicycle__id" type="hidden" value="${bicycle.id}">                    
                 </div>
                 `
             }) 
             .join("")}
     </div>
-        
-
     `
 }

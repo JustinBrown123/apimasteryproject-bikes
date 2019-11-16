@@ -20,7 +20,6 @@ function Pagebuild(){
     home();
     navHome();
     navManufacturers();
-    bicycle();
     navBicycles();
   
     footer();
@@ -144,9 +143,21 @@ function navBicycles(){
             document.querySelector("#app").innerHTML = Bicycles(bicycles)
         })
     })
-    
-}
+    app.addEventListener('click', function(){
+        if(event.target.classList.contains("bicycle__image")){
+            const bicycleID = event.target.parentElement.querySelector(".bicycle__id")
+            .value;
+            apiActions.getRequest(`https://localhost:44312/api/bicycles/${bicycleID}`,
+            bicycle => {
+                console.log(bicycle.image)
+                
+               document.querySelector("#app").innerHTML = Bicycle(bicycle);
 
+               
+             })
+        }
+    });
+}
 
 
     
