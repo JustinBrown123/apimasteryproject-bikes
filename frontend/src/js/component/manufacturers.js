@@ -5,11 +5,11 @@ export default function Manufacturers(manufacturers){
             .map(manufacturer => {
                 return `
                 <div class="manufacturers">
-                    <img class="manufacturer__image" src=${manufacturer.image}>
-                    <input class="manufacturer__id" type="hidden" value="${manufacturer.id}">   </img>
+                    <img class="manufacturer__image" src=${manufacturer.image}> </img>
+                    <input class="manufacturer__id" type="hidden" value="${manufacturer.id}">  
                     <button class="manufacturer__bikes">Available Bikes</button>            
                 </div>
-                `
+                `;
             }) 
             .join("")}
     </div>

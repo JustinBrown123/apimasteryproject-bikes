@@ -62,7 +62,7 @@ function navManufacturers(){
             console.log(manufacturer);
             apiActions.postRequest("https://localhost:44312/api/manufacturers",
             {
-                manufacturer: manufacturer,
+                name: manufacturer,
                 description: description,
                 image: image
             },
@@ -73,6 +73,16 @@ function navManufacturers(){
 
         }
     });
+    app.addEventListener('click', function(){
+        if(event.target.classList.contains("delete-manufacturer__submit")){
+            const manufacturerID = event.target.parentElement.querySelector(".manufacturer__id").value;
+            console.log("delete" + manufacturerID)
+            apiActions.deleteRequest(`https://localhost:44312/api/manufacturers/${manufacturerID}`,
+            manufacturer => {
+                app.innerHTML = Manufacturers(Manufacturers)
+            });
+        }
+    })
 
     app.addEventListener('click', function(){
         if(event.target.classList.contains("manufacturer__bikes")){

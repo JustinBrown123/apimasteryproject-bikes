@@ -29,7 +29,7 @@ namespace apimasteryproject_bikes.Controllers
         [HttpGet("{id}")]
         public Manufacturer Get(int id)
         {
-            return manufacturerRepo.GetById(id);
+            return manufacturerRepo.GetByID(id);
         }
 
         // POST api/Manufacturer
@@ -52,7 +52,7 @@ namespace apimasteryproject_bikes.Controllers
         [HttpDelete("{id}")]
         public IEnumerable<Manufacturer> Delete(int id)
         {
-            var manufacturer = manufacturerRepo.GetById(id);
+            var manufacturer = manufacturerRepo.GetByID(id);
             manufacturerRepo.Delete(manufacturer);
             return manufacturerRepo.GetAll();
         }

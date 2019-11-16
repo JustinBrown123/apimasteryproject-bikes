@@ -32,16 +32,16 @@ namespace apimasteryproject_bikes.Controllers
         [HttpGet("{id}")]
         public Bicycle Get(int id)
         {
-            return bicycleRepo.GetById(id);
+            return bicycleRepo.GetByID(id);
         }
 
-        [HttpGet("{id}")]
-        public IEnumerable<Bicycle> GetByManufacturer(int id)
+        //[HttpGet("{id}")]
+        //public IEnumerable<Bicycle> GetByManufacturer(int id)
 
-        {
-            BicycleRepository bicycleRepoFix = bicycleRepo as BicycleRepository;
-            return bicycleRepoFix.GetByManufacturerID(id);
-        }
+        //{
+        //    BicycleRepository bicycleRepoFix = bicycleRepo as BicycleRepository;
+        //    return bicycleRepoFix.GetByManufacturerID(id);
+        //}
 
         // POST api/Bicycles
         [HttpPost]
@@ -63,7 +63,7 @@ namespace apimasteryproject_bikes.Controllers
         [HttpDelete("{id}")]
         public IEnumerable<Bicycle> Delete(int id)
         {
-            var bicycle = bicycleRepo.GetById(id);
+            var bicycle = bicycleRepo.GetByID(id);
             bicycleRepo.Delete(bicycle);
             return bicycleRepo.GetAll();
         }
