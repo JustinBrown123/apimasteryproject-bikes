@@ -36,9 +36,9 @@ export default function SingleManufacturerPage(manufacturer)  {
             <input class="manufacturer__id" type="hidden" value="${manufacturer.id}">
             <input class="bicycle__name" type='text' placeholder='Add a Bicycle'>
             <input class="bicycle__description"  type='text' placeholder='Add a Bicycle descriptions'>
-            <input class="bicycle__type"  type='text' placeholder='Add a Bicycle Type'>          
+            <input class="bicycle__style"  type='text' placeholder='Add a Bicycle Style'>          
             <input class="bicycle__img" type="hidden" value="images/bicycledrawing.jpg">
-            <button class="add-biycle__submit" id = "buttonCrud">Submit</button>
+            <button class="add-bicycle__submit" id = "buttonCrud">Submit</button>
 
         </section>
         </article>

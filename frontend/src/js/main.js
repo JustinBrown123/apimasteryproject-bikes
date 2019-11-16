@@ -144,6 +144,49 @@ function navBicycles(){
         })
     })
     app.addEventListener('click', function(){
+        if(event.target.classList.contains("add-bicycle__submit")){
+            const bicycle = event.target.parentElement.querySelector(
+                ".bicycle__name"
+            ).value;
+            const manufacturerID= event.target.parentElement.querySelector(
+                ".manufacturer__id"
+            ).value
+            const description= event.target.parentElement.querySelector(
+                ".bicycle__description"
+            ).value;
+            const image= event.target.parentElement.querySelector(
+                ".bicycle__img"
+            ).value;
+            const style= event.target.parentElement.querySelector(
+                ".bicycle__style"
+            ).value;
+            console.log(bicycle);
+            apiActions.postRequest("https://localhost:44312/api/bicycles",
+            {
+                name: bicycle,
+                description: description,
+                style: style,
+                manufacturerID: manufacturerID,
+                image: image
+            },
+            bicycles => {
+                console.log(bicycles);
+                app.innerHTML = Bicycles(bicycles)
+            })
+
+        }
+    });
+    app.addEventListener('click', function(){
+        if(event.target.classList.contains("delete-manufacturer__submit")){
+            const manufacturerID = event.target.parentElement.querySelector(".manufacturer__id").value;
+            console.log("delete" + manufacturerID)
+            apiActions.deleteRequest(`https://localhost:44312/api/manufacturers/${manufacturerID}`,
+            manufacturers => {
+                app.innerHTML = Manufacturers(manufacturers)
+            });
+        }
+    })
+    app.addEventListener('click', function(){
         if(event.target.classList.contains("bicycle__image")){
             const bicycleID = event.target.parentElement.querySelector(".bicycle__id")
             .value;

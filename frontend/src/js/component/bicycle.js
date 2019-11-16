@@ -8,6 +8,7 @@ export default function bicycle(bicycle){
         </section>
     <section class="update-bicycle">
         <input class="update-bicycle__name"${bicycle.name}">
+        <input class="update-bicycle__manufacturerid" type='hidden' value="${bicycle.manufacturerID}">       
         <button class="update-bicycle__submit">Save  Changes</button>
         <input class="update-bicycle__id" type="hidden" value="${bicycle.id}">
     </section>    
