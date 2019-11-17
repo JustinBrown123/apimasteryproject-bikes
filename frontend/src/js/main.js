@@ -7,6 +7,7 @@ import Bicycles from "./component/bicycles";
 import SingleManufacturerPage from "./component/singleManufacturerPage";
 import Bicycle from "./component/bicycle";
 import Manufacturer from "./component/manufacturer"
+import Editbicycle from "./component/editbicycle"
 
 
 
@@ -143,7 +144,9 @@ function navBicycles(){
             document.querySelector("#app").innerHTML = Bicycles(bicycles)
         })
     })
-    app.addEventListener('click', function(){
+
+ 
+    app.addEventListener("click", function(){
         if(event.target.classList.contains("add-bicycle__submit")){
             const bicycle = event.target.parentElement.querySelector(
                 ".bicycle__name"
@@ -176,13 +179,14 @@ function navBicycles(){
 
         }
     });
+
     app.addEventListener('click', function(){
-        if(event.target.classList.contains("delete-manufacturer__submit")){
-            const manufacturerID = event.target.parentElement.querySelector(".manufacturer__id").value;
-            console.log("delete" + manufacturerID)
-            apiActions.deleteRequest(`https://localhost:44312/api/manufacturers/${manufacturerID}`,
-            manufacturers => {
-                app.innerHTML = Manufacturers(manufacturers)
+        if(event.target.classList.contains("delete-bicycle__submit")){
+            const bicycleID = event.target.parentElement.querySelector(".bicycle__id").value;
+            console.log("delete" + bicycleID)
+            apiActions.deleteRequest(`https://localhost:44312/api/bicycles/${bicycleID}`,
+            bicycles => {
+                app.innerHTML = Bicycles(bicycles)
             });
         }
     })
@@ -198,6 +202,51 @@ function navBicycles(){
 
                
              })
+        }
+    });
+    app.addEventListener("click", function(){
+        if(event.target.classList.contains("edit-bicycle__submit")){
+            const bicycleID = event.target.parentElement.querySelector(".bicycle__id").value;
+            console.log("edit" + bicycleID);
+            apiActions.getRequest(`https://localhost:44312/api/bicycles/${bicycleID}`,
+                bicycle => {
+                    app.innerHTML= Editbicycle(bicycle);
+            })
+        }
+    });
+    app.addEventListener('click', function(){
+        if(event.target.classList.contains("update-bicycle__submit")){
+            const bicycleID = event.target.parentElement.querySelector(
+                ".update-bicycle__id").value;
+            const bicycle = event.target.parentElement.querySelector(
+                ".update-bicycle__name"
+            ).value;
+            const manufacturerID= event.target.parentElement.querySelector(
+                ".update-bicycle__manufacturerid"
+            ).value
+            const description= event.target.parentElement.querySelector(
+                ".update-bicycle__description"
+            ).value;
+            const image= event.target.parentElement.querySelector(
+                ".update-bicycle__image"
+            ).value;
+            const style= event.target.parentElement.querySelector(
+                ".update-bicycle__style"
+            ).value;
+            const bicycleData = {
+                id: bicycleID,
+                name: bicycle,
+                description: description,
+                style: style,
+                manufacturerID: manufacturerID,
+                image: image
+            }
+            apiActions.putRequest(`https://localhost:44312/api/bicycles/${bicycleID}`,
+            bicycleData,
+            bicycles =>{
+                app.innerHTML = Bicycles(bicycles)
+            })
+
         }
     });
 }

@@ -19,7 +19,6 @@ export default function SingleManufacturerPage(manufacturer)  {
                     <h3>${bicycle.name}</h3>
                     <h4>${bicycle.style}</h4>
                     <img class="bicycle__image" src=${bicycle.image}></img>
-                    <p>${bicycle.description}</p>
                     <input class="bicycle__id" type="hidden" value="${bicycle.id}">
                         <button class="edit-bicycle__submit" id="buttonCrud">Edit</button>
                         <button class="delete-bicycle__submit" id="buttonCrud">Delete</button>
