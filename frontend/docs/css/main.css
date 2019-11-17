@@ -1,4 +1,33 @@
-*
+*{
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+nav {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  min-height: 8vh;
+  background-color: #adabab;
+  font-family: 'Poppins', sans-serif;
+}
+
+.nav_header {
+  display: flex;
+  justify-content: space-around;
+  width: 30%;
+  background-color: blue;
+ } 
+
+.logo{
+  color: rgb(226, 226, 226);
+  text-transform: uppercase;
+  letter-spacing: 5px;
+  font-size: 24px;
+}
+
+
 img{
     width: 50%;
     height: 50%;
