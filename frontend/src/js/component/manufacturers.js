@@ -16,12 +16,12 @@ export default function Manufacturers(manufacturers){
             .join("")}
     </div>
     
-    <section class="add-forum">
+    <div class="adding">
             <input class="add-manufacturer__manufacturerName" type="text" placeholder="Add a Manufacturer">
             <input class="add-manufacturer__manufacturerDescription" type="text" placeholder="Add a Description">
             <input class="add-manufacturer__manufacturerimg" type="hidden" value="./Images/bicycledrawing.jpg">
-            <button class="add-manufacturer__submit">Submit</button>
-    </section>
+            <button class="add-manufacturer__submit" id="buttonCrud">Submit</button>
+    </div>
 
     `
 }

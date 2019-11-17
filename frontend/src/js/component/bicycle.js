@@ -1,7 +1,7 @@
 export default function bicycle(bicycle){
     return `
     <article>
-    <div class=singleObject">
+    <div class="singleObject">
         <section class="main-content__bicycle">
             <h3>${bicycle.name}</h3>          
             <img class="bicycleImage" src=${bicycle.image}></img>
@@ -11,7 +11,7 @@ export default function bicycle(bicycle){
         </section>
         </div>    
 </article>
-        <div class="editObject">
+        <div class="delete__edit">
         <h3>Make changes to: ${bicycle.name}</h3>  
         <input class="bicycle__id" type="hidden" value="${bicycle.id}">
         <button class="edit-bicycle__submit" id="buttonCrud">Edit</button>

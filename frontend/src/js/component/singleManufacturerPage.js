@@ -2,7 +2,7 @@ export default function SingleManufacturerPage(manufacturer)  {
     return `
    
         <article>
-        <div class=singleObject">
+        <div class="singleObject">
             <ul>
             <img src=${manufacturer.image} class ="manufacturer__image">
             <p>${manufacturer.description}</p>
@@ -29,7 +29,7 @@ export default function SingleManufacturerPage(manufacturer)  {
         </div>  
 
         </ul>
-        <section class="addingform">
+        <div class="adding">
  
          <h2>Add a Bicycle</h1>
             <input class="manufacturer__id" type="hidden" value="${manufacturer.id}">
@@ -39,11 +39,11 @@ export default function SingleManufacturerPage(manufacturer)  {
             <input class="bicycle__img" type="hidden" value="images/bicycledrawing.jpg">
             <button class="add-bicycle__submit" id = "buttonCrud">Submit</button>
 
-        </section>
+        </div>
         </article>
 
 
-        <div class="editObject">
+        <div class="delete__edit">
             <h3>Make changes to: ${manufacturer.name}</h3>  
             <input class="manufacturer__id" type="hidden" value="${manufacturer.id}">
             <button class="edit-manufacturer__submit" id="buttonCrud">Edit</button>
