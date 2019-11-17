@@ -3,3 +3,36 @@ img{
     width: 50%;
     height: 50%;
   }
+  
+#buttonCrud {
+    background-color: #333;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    border-radius:20px;
+  }
+.adding{
+    background: #ad6a2b;
+    color: white;
+    padding: 1em;
+    text-align: center;
+  } 
+.delete__edit{
+  text-align: center;
+  }
+.singleObject{
+  text-align: center;
+  }
+.objectGrid{
+  text-align: center;
+}
+.bicycles{
+  text-align: center;
+}
+.manufacturers{
+  text-align: center;
+}

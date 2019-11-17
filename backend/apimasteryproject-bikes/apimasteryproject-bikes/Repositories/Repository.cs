@@ -16,18 +16,13 @@ namespace apimasteryproject_bikes.Repositories
             this.db = db;
         }
 
-        //public int Count()
-        //{
-        //    return db.Set<T>().Count();
-        //}
-
         public void Create(T entity)
         {
             db.Set<T>().Add(entity);
             db.SaveChanges();
         }
 
-        public virtual T GetById(int id)
+        public virtual T GetByID(int id)
         {
             return db.Set<T>().Find(id);
         }

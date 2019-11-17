@@ -2,15 +2,17 @@
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using apimasteryproject_bikes.Context;
 
 namespace apimasteryproject_bikes.Migrations
 {
     [DbContext(typeof(BikeContext))]
-    partial class BikeContextModelSnapshot : ModelSnapshot
+    [Migration("20191117190848_Resetting-seed-data")]
+    partial class Resettingseeddata
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
