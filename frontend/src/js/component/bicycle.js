@@ -9,7 +9,7 @@ export default function bicycle(bicycle){
             <p>${bicycle.description}</p>
            
         </section>
-        </div>    
+    </div>    
 </article>
         <div class="delete__edit">
         <h3>Make changes to: ${bicycle.name}</h3>  

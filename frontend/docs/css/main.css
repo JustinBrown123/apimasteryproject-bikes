@@ -1,7 +1,12 @@
-* {
+/* * {
   margin: 0px;
   padding: 0px;
   box-sizing: border-box;
+} */
+
+#app {
+  
+  justify-content: center;
 }
 
 html {
@@ -14,8 +19,9 @@ color: rgb(252, 253, 253);
 }
 
 img{
-    width: 50%;
-    height: 50%;
+  width: 85%;
+  height: 85%;
+  margin-top: 5%;
   } 
 
 .headerwrap {
@@ -76,34 +82,84 @@ ul a {
     font-size: 16px;
     border-radius:20px;
   }
-.adding{
+.adding {
     display: flex;
     justify-content: space-around;
     align-items: center;
-    width: 50%;
-    background: #ad3a2b;
+    margin-left: 30%;
+    margin-right: 30%;
+    background: rgb(0, 0, 0);
     color: white;
     padding: 1em;
     text-align: center;
-  } 
+    margin-top: 5%;
+    margin-bottom: 5%;
+    border: 3px solid blueviolet;
+  }
+
+  
+  
+  .bicycles {
+    border: 3px solid blueviolet;
+  }
+  
+  .addingfmwrapper{
+    justify-content: center;
+  }
 .delete__edit{
   text-align: center;
   }
 .singleObject{
+  background-color: black;
+  display: grid;
+  margin-right: 15%;
+  margin-left: 15%;
+  margin-top: 5%;
+  width: 900px;
+  height: auto;
   text-align: center;
+  border: 4px solid blueviolet;
+  box-shadow: 0px 0px 30px 40px #000000;
   }
 .objectGrid{
+  margin-left: 10%;
+  margin-right: 10%;
+  margin-top: 5%;
   display: grid;
+  grid-template-rows: 300px 300px 300px;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 20px;
+  
+  /* display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: auto;
   grid-column-gap: 1em;
   grid-row-gap: 1em;
   max-width: 22em;
-  text-align: center;
+  text-align: center; */
 }
 .bicycles{
   text-align: center;
+  background-color: black;
+  border: 3px solid blueviolet;
+  box-shadow: 0px 0px 10px 10px #000000;
+
+
 }
-.manufacturers{
+.bicycles h3 {
+  font-size: .7em;
+  margin-block-start: 0;
+  margin-block-end: 0em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+  font-weight: bold;
+}
+
+.manufacturers {
+  justify-content: center;
   text-align: center;
+  background-color: black;
+  border: 3px solid blueviolet;
+  box-shadow: 0px 0px 10px 10px #000000;
+  
 }
