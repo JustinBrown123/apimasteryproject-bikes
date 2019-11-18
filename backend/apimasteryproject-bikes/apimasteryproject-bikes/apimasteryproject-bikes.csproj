@@ -15,6 +15,8 @@
     <Compile Remove="Migrations\20191115020220_experiment.Designer.cs" />
     <Compile Remove="Migrations\20191115020947_experiment.cs" />
     <Compile Remove="Migrations\20191115020947_experiment.Designer.cs" />
+    <Compile Remove="Migrations\20191118140807_updatedatabase.cs" />
+    <Compile Remove="Migrations\20191118140807_updatedatabase.Designer.cs" />
   </ItemGroup>
 
   <ItemGroup>
