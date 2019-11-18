@@ -14,7 +14,11 @@ img{
     display: inline-block;
     font-size: 16px;
     border-radius:20px;
-  }
+}
+#video{
+  margin-left: auto;
+  margin-right: auto;
+}
 .adding{
     background: #ad6a2b;
     color: white;
