@@ -81,6 +81,7 @@ ul a {
     display: inline-block;
     font-size: 16px;
     border-radius:20px;
+
   }
 .adding {
     display: flex;
@@ -89,6 +90,15 @@ ul a {
     margin-left: 30%;
     margin-right: 30%;
     background: rgb(0, 0, 0);
+
+}
+#video{
+  margin-left: auto;
+  margin-right: auto;
+}
+.adding{
+    background: #ad6a2b;
+
     color: white;
     padding: 1em;
     text-align: center;
