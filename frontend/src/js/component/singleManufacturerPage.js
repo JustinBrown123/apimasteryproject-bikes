@@ -3,11 +3,9 @@ export default function SingleManufacturerPage(manufacturer)  {
    
         <article>
         <div class="singleObject">
-            <ul>
             <img src=${manufacturer.image} class ="manufacturer__image">
             <p>${manufacturer.description}</p>
             <input id="manufacturer__id" type="hidden" value="${manufacturer.id}"> </img>
-            </ul>
         </div>    
         </article>
 
