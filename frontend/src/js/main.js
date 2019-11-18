@@ -39,13 +39,13 @@ function home(){
     app.innerHTML = Home();
 }
 function navHome(){
-    const homeButton=document.querySelector(".nav__home")
+    const homeButton=document.querySelector("#nav__home")
     homeButton.addEventListener("click", function(){
         document.querySelector("#app").innerHTML = Home(home)
     })
 }
 function navManufacturers(){
-    const manufacturersButton= document.querySelector(".nav__manufacturers")
+    const manufacturersButton= document.querySelector("#nav__manufacturers")
     const app = document.querySelector("#app")
     manufacturersButton.addEventListener("click", function(){
         apiActions.getRequest("https://localhost:44312/api/manufacturers", manufacturers =>{
@@ -137,7 +137,7 @@ function navManufacturers(){
     });
 }
 function navBicycles(){
-    const bicyclesButton= document.querySelector(".nav__bicycles")
+    const bicyclesButton= document.querySelector("#nav__bicycles")
     const app = document.querySelector("#app")
     bicyclesButton.addEventListener("click", function(){
         apiActions.getRequest("https://localhost:44312/api/bicycles", bicycles =>{
