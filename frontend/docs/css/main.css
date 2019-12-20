@@ -1,5 +1,196 @@
-*
+/* * {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+} */
+
+#app {
+  
+  justify-content: center;
+}
+
+html {
+background-image: linear-gradient(rgba(0, 0, 0, 0.698), rgb(0, 0, 0, 0.698)),
+url("../images/bikewallpaper5.jpg");
+width: 100%;
+height: auto;
+font-family: 'Poppins', sans-serif;
+color: rgb(252, 253, 253);
+}
+
 img{
-    width: 50%;
-    height: 50%;
+  width: 85%;
+  /* height: 85%; */
+  margin-top: 5%;
+  } 
+
+.headerwrap {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  min-height: 8vh;
+  background-color: rgb(0, 0, 0);
+  font-family: 'Poppins', sans-serif;
+  color: rgb(252, 253, 253);
+}
+
+.line1, .line2, .line3 {
+  width: 35px;
+  height: 5px;
+  background-color: rgb(252, 253, 253);
+  margin: 6px 0;
+  transition: 0.4s;
+}
+
+.change .line1 {
+  -webkit-transform: rotate(-45deg) translate(-9px, 6px);
+  transform: rotate(-45deg) translate(-9px, 6px);
+}
+
+.change .bar2 {opacity: 0;}
+
+.change .bar3 {
+  -webkit-transform: rotate(45deg) translate(-8px, -8px);
+  transform: rotate(45deg) translate(-8px, -8px);
+}
+
+
+ul {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 40%;
+  list-style-type: none;
+  float: right;
+}
+
+ul a {
+  letter-spacing: 3px;
+  font-size: 14px;
+  justify-content: center;
+
+}
+
+.burger {
+  width: 30px;
+  height: 85px;
+  margin: 5px;
+  display: inline-block;
+  cursor: pointer;
   }
+
+
+
+/* #nav_header {
+  display: inline-block;
+} */
+  
+#buttonCrud {
+    background-color: #333;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    border-radius:20px;
+
+  }
+.adding {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-left: 30%;
+    margin-right: 30%;
+    background: rgb(0, 0, 0);
+
+}
+#video{
+  margin-left: auto;
+  margin-right: auto;
+}
+.adding{
+    background: #000000;
+
+    color: white;
+    padding: 1em;
+    text-align: center;
+    margin-top: 5%;
+    margin-bottom: 5%;
+    border: 3px solid blueviolet;
+  }
+
+  
+  
+  .bicycles {
+    border: 3px solid blueviolet;
+  }
+  
+  .addingfmwrapper{
+    justify-content: center;
+  }
+.delete__edit{
+  text-align: center;
+  }
+.singleObject{
+  background-color: black;
+  justify-content: space-around;
+  align-items: center;
+  display: grid;
+  margin-right: 15%;
+  margin-left: 15%;
+  margin-top: 5%;
+  width: auto;
+  height: auto;
+  text-align: center;
+  border: 3px solid blueviolet;
+  box-shadow: 0px 0px 30px 40px #000000;
+  }
+
+  .edit-bicycle_submit .delete-bicycle_submit {
+    background-color: #000000; 
+  }
+
+.objectGrid{
+  margin-left: 10%;
+  margin-right: 10%;
+  margin-top: 5%;
+  display: grid;
+  grid-template-rows: 300px 300px 300px;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 20px;
+  
+  /* display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: auto;
+  grid-column-gap: 1em;
+  grid-row-gap: 1em;
+  max-width: 22em;
+  text-align: center; */
+}
+.bicycles{
+  text-align: center;
+  background-color: black;
+  border: 3px solid blueviolet;
+  box-shadow: 0px 0px 10px 10px #000000;
+
+
+}
+.bicycles h3 {
+  font-size: .7em;
+  margin-block-start: 0;
+  margin-block-end: 0em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+  font-weight: bold;
+}
+
+.manufacturers {
+  justify-content: center;
+  text-align: center;
+  background-color: black;
+  border: 3px solid blueviolet;
+  box-shadow: 0px 0px 10px 10px #000000;
+} 
+

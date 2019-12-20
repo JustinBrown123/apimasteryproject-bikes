@@ -16,7 +16,7 @@ namespace apimasteryproject_bikes.Repositories
             this.db = context;
         }
 
-        public override Manufacturer GetById(int id)
+        public override Manufacturer GetByID(int id)
         {
             return db.Set<Manufacturer>().Where(i => i.ID == id).Include("Bicycles").FirstOrDefault();
         }

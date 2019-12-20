@@ -2,15 +2,17 @@
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using apimasteryproject_bikes.Context;
 
 namespace apimasteryproject_bikes.Migrations
 {
     [DbContext(typeof(BikeContext))]
-    partial class BikeContextModelSnapshot : ModelSnapshot
+    [Migration("20191116040950_logo-image")]
+    partial class logoimage
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -103,15 +105,6 @@ namespace apimasteryproject_bikes.Migrations
                             ManufacturerID = 6,
                             Name = "Patrol Carbon X01",
                             Style = "Mountain"
-                        },
-                        new
-                        {
-                            ID = 8,
-                            Description = "The Orange Crush is a bike you don't want to mess with. It's loved and revered, with award winning performance. It's the definitive aluminium hardcore hardtail. The frame is bang on point, the rear triangle features a 148 Boost bolt - through axle, giving unparalleled stability to what is already a strong and rigid chassis.The new model's geometry has been tweaked with a 64° head angle which, matched with the Crush’s long top tube design, adds an extra degree of confidence in the handling. With a short 50mm stem the rider is right where they need to be for direct control and weight distribution. Short chainstays make climbing as sweet as ever for a long-forked hardtail, those stays now reshaped with a CNCed yoke on the chainstay to allow plenty of clearance for a more than chunky 2.6 tyre. The Crush’s unshakeable attitude is as strong as ever.Built tough to be ridden hard, where it really excels, on the rough stuff.",
-                            Image = "./Images/OrangeCrush.jpg",
-                            ManufacturerID = 7,
-                            Name = "Orange Crush",
-                            Style = "Mountain"
                         });
                 });
 
@@ -142,16 +135,23 @@ namespace apimasteryproject_bikes.Migrations
                         new
                         {
                             ID = 2,
-                            Description = "Trek Bicycle Corporation is a bicycle and cycling product manufacturer and distributor under brand names Trek, Electra Bicycle Company, Gary Fisher, Bontrager, Diamant Bikes, Villiger Bikes and, until 2008, LeMond Racing Cycles and Klein. With its headquarters in Waterloo, Wisconsin, Trek bicycles are marketed through 1,700 dealers across North America, subsidiaries in Europe and Asia as well as distributors in 90 countries worldwide. 99% of Trek bicycles are manufactured outside the United States, in countries including the Netherlands, Germany, Taiwan and China.",
+                            Description = "Trek Bicycle Corporation is a bicycle and cycling product manufacturer and distributor under brand names Trek, Electra Bicycle Company, Gary Fisher, Bontrager, Diamant Bikes, Villiger Bikes and, until 2008, LeMond Racing Cycles and Klein. With its headquarters in Waterloo, Wisconsin, Trek bicycles are marketed through 1,700 dealers across North America, subsidiaries in Europe and Asia as well as distributors in 90 countries worldwide. 99% of Trek bicycles are manufactured outside the United States, in countries including the Netherlands, Germany, Taiwan and China.In December, 1975, Richard (Dick) Burke and Bevil Hogg established Trek Bicycle as a wholly owned subsidiary of Roth Corporation, a Milwaukee-based appliance distributor. In early 1976, with a payroll of five, Trek started manufacturing steel touring frames in Waterloo, Wisconsin, taking aim at the mid to high-end market dominated by Japanese and Italian made models. Trek built nearly 900 custom hand-brazed framesets that first year, each selling for just under $200. Later that same year Trek Bicycle was incorporated. In 1977, Penn Cycle in Richfield, Minnesota became the first Trek dealer in the world. Within three years, Trek sales approached $2,000,000.",
                             Image = "./Images/Treklogo.jpg",
                             Name = "Trek"
                         },
                         new
                         {
                             ID = 3,
-                            Description = "The company was founded in 1971 by Joe Montgomery and Murdock MacGregor to manufacture precast concrete housing. Then Joe Montgomery, after a camping bike trip with his son, conceived the Bugger bicycle trailer. Ron Davis devised the under-seat hitch, a torsion spring made of Lexan. Wistrand designed the cloth bags and cargo carrier on the two models of trailers. Joe, in an effort repeated in numerous products, sourced the cloth components and ensured perfection in their manufacture. A trip to the Bicycle Show in New York was an eye opener.",
+                            Description = "The company was founded in 1971 by Joe Montgomery and Murdock MacGregor to manufacture precast concrete housing. Then Joe Montgomery, after a camping bike trip with his son, conceived the Bugger bicycle trailer. Ron Davis devised the under-seat hitch, a torsion spring made of Lexan. Wistrand designed the cloth bags and cargo carrier on the two models of trailers. Joe, in an effort repeated in numerous products, sourced the cloth components and ensured perfection in their manufacture. A trip to the Bicycle Show in New York was an eye opener. The team was besieged by bike dealers wanting to buy the bags. They bought trailers too but really wanted the bags. In less than six months Cannondale became the world's largest manufacturer of lightweight bicycle bags. Using a marketing plan devised by Montgomery, Cannondale swept across the US, securing orders from more than 2500 dealers in less than 20 months. They then used the infrastructure developed to produce the bags to enter the camping goods market with backpacks and tents. Regarding the Bugger trailer, although Cannondale's marketing department claimed to be unaware of the connotations of that name in British English, some were, nevertheless, exported to the UK.Once fully immersed in the retail bicycle industry, Todd Patterson, another exceptional designer / inventor, came aboard and developed the process for jigging and welding aluminum bicycle frames.Cannondale became a serious manufacturer of bicycles.",
                             Image = "./Images/Cannondalelogo.jpg",
                             Name = "Cannondale"
+                        },
+                        new
+                        {
+                            ID = 4,
+                            Description = "Focus Bikes is a bicycle manufacturer that has its administration in Filderstadt, Germany and production facilities based in Cloppenburg, Germany and builds sport bicycles such as e-bikes, racing bicycles and mountain bicycles. The company was founded in 1993 by Mike Kluge, cyclocross World Champion.",
+                            Image = "./Images/Focuslogo.jpg",
+                            Name = "Focus"
                         },
                         new
                         {
@@ -166,13 +166,6 @@ namespace apimasteryproject_bikes.Migrations
                             Description = "Depending on who you ask, Transition Bikes was either established in 2001 or in 2003. It's a long-running debate between Kyle Young and Kevin Menard, the company's founders. Kevin says it was in 2001, when the idea of starting a bike company came to the surface over a game of ping-pong, while Kyle asserts that it was 2003, when the first shipment of 100 bikes arrived in the US.",
                             Image = "./Images/Transitionlogo.jpg",
                             Name = "Transition"
-                        },
-                        new
-                        {
-                            ID = 7,
-                            Description = "BUILT IN BRITAIN, We work with partners all over the world to source many of our our frames and components, today we’re talking specifically about the British built models.We started production of our full - suspension frames in Halifax in 1998.It seemed the easiest way to get the development we needed for the frame ideas we were pursuing.Well it turned out not to be ‘easy’, but it did turn out to be successful, and the rest, as they say, is history. Since those intrepid beginnings we have built a lot of frames and learned plenty.While experience has taught us a lot, the little tweaks and tricks that we have learned in the building process aren’t necessarily obvious in the final frame, but they are crucial steps to producing some of the strongest and most reliable high - performance mountain bikes in the world. IT’S NOT SO SIMPLE The best ideas are always the simplest, right ? In bike development terms the Orange bikes are just that, a great idea done simply, but more importantly done well. We are often asked why we don’t make frames the same as everyone else. Well, thanks for asking but we really like the the way we do it.And so do the people who buy Orange bikes and try to ride the wheels off them. We simply build bikes to be ridden not to be hung on the wall and admired(although you can do that too, if you want). While we are open-minded to new ideas, we’re adamant about ensuring change is for the better and not just a marketing fad.We use our STrange R & D prototype program to sort the wheat from the chaff. ",
-                            Image = "./Images/Orange.jpg",
-                            Name = "Orange"
                         });
                 });
 

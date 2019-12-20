@@ -8,7 +8,7 @@ namespace apimasteryproject_bikes.Repositories
     public interface IRepository<T> where T : class
     {
         IEnumerable<T> GetAll();
-        T GetById(int id);
+        T GetByID(int id);
         void Create(T entity);
         void Delete(T entity);
         void Update(T entity);
