@@ -1,9 +1,3 @@
-/* * {
-  margin: 0px;
-  padding: 0px;
-  box-sizing: border-box;
-} */
-
 #app {
   
   justify-content: center;
@@ -20,7 +14,6 @@ color: rgb(252, 253, 253);
 
 img{
   width: 85%;
-  /* height: 85%; */
   margin-top: 5%;
   } 
 
@@ -71,19 +64,7 @@ ul a {
 
 }
 
-.burger {
-  width: 30px;
-  height: 85px;
-  margin: 5px;
-  display: inline-block;
-  cursor: pointer;
-  }
 
-
-
-/* #nav_header {
-  display: inline-block;
-} */
   
 #buttonCrud {
     background-color: #333;
@@ -104,32 +85,27 @@ ul a {
     margin-left: 30%;
     margin-right: 30%;
     background: rgb(0, 0, 0);
-
-}
-#video{
-  margin-left: auto;
-  margin-right: auto;
-}
-.adding{
     background: #000000;
-
     color: white;
     padding: 1em;
     text-align: center;
     margin-top: 5%;
     margin-bottom: 5%;
     border: 3px solid blueviolet;
-  }
 
-  
-  
+}
+#video{
+  margin-left: auto;
+  margin-right: auto;
+}
+
+
   .bicycles {
     border: 3px solid blueviolet;
+    max-height: 100%;
+    max-width: 100%;
   }
   
-  .addingfmwrapper{
-    justify-content: center;
-  }
 .delete__edit{
   text-align: center;
   }
@@ -160,23 +136,29 @@ ul a {
   grid-template-rows: 300px 300px 300px;
   grid-template-columns: repeat(3, 1fr);
   grid-gap: 20px;
-  
-  /* display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: auto;
-  grid-column-gap: 1em;
-  grid-row-gap: 1em;
-  max-width: 22em;
-  text-align: center; */
-}
-.bicycles{
   text-align: center;
   background-color: black;
   border: 3px solid blueviolet;
   box-shadow: 0px 0px 10px 10px #000000;
-
+  justify-content: center;
 
 }
+.bicyclesGrid{
+  margin-left: 10%;
+  margin-right: 10%;
+  margin-top: 5%;
+  display: grid;
+  grid-template-rows: 300px 300px 300px;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 20px;
+  text-align: center;
+  background-color: black;
+  border: 3px solid blueviolet;
+  box-shadow: 0px 0px 10px 10px #000000;
+  justify-content: center;
+
+}
+
 .bicycles h3 {
   font-size: .7em;
   margin-block-start: 0;
@@ -186,11 +168,4 @@ ul a {
   font-weight: bold;
 }
 
-.manufacturers {
-  justify-content: center;
-  text-align: center;
-  background-color: black;
-  border: 3px solid blueviolet;
-  box-shadow: 0px 0px 10px 10px #000000;
-} 
 
